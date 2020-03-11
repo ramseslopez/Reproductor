@@ -1,4 +1,4 @@
-<html>
+<!-- <html>
     <head>
         <title>Top Songs</title>
     </head>
@@ -6,4 +6,13 @@
         <h1>Lo más trendy de al semana</h1>
         <h2>Estas son las canciones del momento</h2>
     </body>
-</html>
+</html> -->
+{% extends 'music/base.html' %}
+
+{% load static %}
+
+{% block title %}Canciones populares{% endblock title %}
+
+{% block body_content %}
+    <h1>Estas son las canciones populares:</h1>
+{% endblock body_content %}

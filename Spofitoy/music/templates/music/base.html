@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    {% load static %}
+<head>
+    <link rel="shortcut icon" href="{% static "music/img/logo2.ico" %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | Spofitoy</title>
+    <link rel="stylesheet" type="text/css" href={% static 'music/css/base.css' %}>
+    <link rel="stylesheet" type="text/css" href={% static 'music/css/player.css' %}>
+    {% block head %}
+    <div class="header">
+        <a href="" class="logo"><img src="{% static "music/img/logo.png" %}" width="250" height="100"></a>
+        <div class="header-right">
+          <a class="active" href="#home">Inicio</a>
+          <a href="#contact">Buscar</a>
+          <a href="#about">Tu biblioteca</a>
+        </div>
+      </div> 
+    {% endblock head %}
+    
+</head>
+<body>
+{% block body_content %}
+
+
+{% endblock body_content %}
+
+{% include 'music/player.html' %}
+<footer id="main-footer">
+    <p>&copy; 2020 <a href=""></a></p>
+  </footer>
+</body>
+</html>
