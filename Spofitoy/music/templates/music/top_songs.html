@@ -1,12 +1,4 @@
-<!-- <html>
-    <head>
-        <title>Top Songs</title>
-    </head>
-    <body>
-        <h1>Lo más trendy de al semana</h1>
-        <h2>Estas son las canciones del momento</h2>
-    </body>
-</html> -->
+
 {% extends 'music/base.html' %}
 
 {% load static %}
@@ -15,4 +7,10 @@
 
 {% block body_content %}
     <h1>Estas son las canciones populares:</h1>
+     <ul>
+        {% for song in songs  %}
+        <li>{{song}} </li>
+        <audio src="media/songs/Si_Me_Dices_Que_Me_Quieres.mp3" controls="controls" type="audio/mpeg" preload="preload"></audio>
+        {% endfor %}
+    </ul>
 {% endblock body_content %}
