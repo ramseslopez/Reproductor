@@ -1,0 +1,19 @@
+{% extends 'music/base.html' %}
+
+{% load static %}
+
+{% block title %}Cantantes{% endblock title %}
+
+{% block body_content %}
+    <h1>Cantantes destacados</h1>
+    
+    <ul>
+        {% for singer in singers %}
+        <li> {{ singer.name }} </li>
+        {% endfor %}
+    </ul>
+    
+    <br><br>
+
+    <button name="button" ><a href="create_artist">Agregar artista</a></button>
+{% endblock body_content %}

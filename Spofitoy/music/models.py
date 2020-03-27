@@ -10,6 +10,7 @@ class Artist(models.Model):
     name = models.CharField(max_length = 200)
     image = models.ImageField(upload_to = "artists/images", null = True)
 
+
     def __str__(self):
         """
         Get str representation
@@ -45,7 +46,7 @@ class Song(models.Model):
         artists_str = f"{artists[0].name}"
         for artist in artists[1:]:
             artists_str += f", {artist.name}"
-        return f"{self.name} by {artists_str}"
+        return f"{self.name} por {artists_str}"
 
     def __repr__(self):
         """

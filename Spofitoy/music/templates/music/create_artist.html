@@ -1,0 +1,15 @@
+{% extends 'music/base.html' %}
+
+{% load static %}
+
+{% block title %} Agregar Artista {% endblock title %}
+
+{% block body_content %}
+
+<h2>Nuevo artista</h2>
+   <form method="POST">{% csrf_token %}
+        {{ form.as_p }}
+        <input type = 'submit' value = 'Guardar' />
+    </form>
+
+{% endblock body_content %}

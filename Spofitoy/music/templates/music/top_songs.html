@@ -8,9 +8,11 @@
 {% block body_content %}
     <h1>Estas son las canciones populares:</h1>
      <ul>
-        {% for song in songs  %}
+        {% for song in songs %}
         <li>{{song}} </li>
-        <audio src="media/songs/Si_Me_Dices_Que_Me_Quieres.mp3" controls="controls" type="audio/mpeg" preload="preload"></audio>
+        <audio controls>
+        <source src="{{ song.song_file.url }}" type="audio/mp3">
+        </audio>
         {% endfor %}
     </ul>
-{% endblock body_content %}
+{% endblock body_content %} 
